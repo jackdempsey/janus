@@ -1,0 +1,34 @@
+" maybe want tabs changed like this?
+"
+nmap <Tab> :bn<CR>
+nmap <s-tab> :bp<CR>
+
+" let C-k and C-j push content up and down respectively
+
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+map <Leader>s :sp <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>v :sp /Users/jack/.vimrc<CR><C-W>_
+map <silent> <Leader>V :source /Users/jack/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q!<CR>
+nmap <Leader>b :bd<CR>
+"nmap <Leader>wb :wbd<CR>
+
+" Opens a split panel command with the path of the currently edited file filled in
+" Normal mode: <Leader>s
+"map <Leader>s :sp <C-R>=expand("%:p:h") . "/" <CR>
+
+set pastetoggle=<F2>
+set nosmartcase

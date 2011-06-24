@@ -32,3 +32,4 @@ nmap <Leader>b :bd<CR>
 
 set pastetoggle=<F2>
 set nosmartcase
+set hidden
